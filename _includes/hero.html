@@ -1,17 +1,15 @@
-<section class="hero">
-  <div class="wrapper text-center">
-    <h1 rel="title">{{ site.event.name }}</h1>
-    <h2 rel="description">{{ site.event.description }}</h2>
-    <h3 rel="location">{{ site.event.date }} &mdash; {{ site.event.location }}</h3>
-    <hr>
-    <div class="buttons">
-      {% for link in site.event.hero.links %}
-        {% if link.href %}
-          <a href="{{ link.href }}">{{ link.text }}</a>
-        {% elsif link.my_mlh %}
-          <a class="apply" href="https://my.mlh.io/oauth/authorize?client_id={{ link.my_mlh.client_id }}&amp;redirect_uri={{ link.my_mlh.redirect_uri }}&amp;response_type=token">{{ link.text }}</a>
-        {% endif %}
-      {% endfor %}
-    </div>
+<section class="hero-section" style="background: linear-gradient(to right, #cc0033, #8b001a); color: white; text-align: center; padding: 100px 20px;">
+  <div class="container">
+    <h1 style="font-size: 3.5rem; font-weight: 800; letter-spacing: -1px;">Hack RUC 2025</h1>
+    <p style="font-size: 1.25rem; margin: 20px auto; max-width: 600px;">
+      Rutgers-Camden Hackathon
+    </p>
+    <p style="font-size: 1rem;">October X–Z, 2025 — Camden, NJ</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScXH0ZDtlpDHVW7CntkQq_PNxdWU6Vqu06Z7RmYTQ5Ea8AXzA/viewform?usp=sf_link"
+       target="_blank"
+       class="cta-button"
+       style="margin-top: 30px;">
+      Pre-Register Now
+    </a>
   </div>
 </section>
