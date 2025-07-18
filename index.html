@@ -34,16 +34,18 @@ layout: default
     <div class="row">
       <div class="col-xs-12 col-sm-8 col-sm-offset-2">
         {% for item in site.event.faq %}
-        <div class="question col-xs-12 col-sm-12">
-          <h2>{{ item.question }}</h2>
-          <hr>
-          {{ item.answer | markdownify }}
-        </div>
+        <details>
+          <summary>{{ item.question }}</summary>
+          <p>{{ item.answer | markdownify }}</p>
+        </details>
         {% endfor %}
       </div>
     </div>
   </div>
 </section>
+
+
+
 
 <section class="discord" style="text-align: center; padding: 40px 20px; background-color: #f0f8ff;">
   <div class="container">
