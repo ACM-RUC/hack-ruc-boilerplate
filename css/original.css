@@ -332,3 +332,23 @@ section {
   color: #333;
   padding-left: 5px;
 }
+
+.countdown-section {
+  background-color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#timer {
+  font-size: 48px;
+  font-weight: 700;
+  color: #CC0033;
+  margin-top: 20px;
+}
+
+#timer .label {
+  font-size: 20px;
+  margin: 0 10px;
+  color: #0F2C34;
+}
+
