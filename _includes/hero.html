@@ -1,8 +1,8 @@
 <section class="hero-section" style="background: linear-gradient(to right, #cc0033, #8b001a); color: white; text-align: center; padding: 100px 20px;">
   <div class="container">
-    <h1 style="font-size: 5.5rem; font-weight: 800; letter-spacing: -1px;"> {{site.event.name}} {{ date: "%Y" }} </h1>
+    <h1 style="font-size: 5.5rem; font-weight: 800; letter-spacing: -1px;"> {{ site.event.name }} {{ date: "%Y" }} </h1>
     <p style="font-size: 2.5rem; margin: 20px auto; max-width: 600px;"> {{ site.event.description }} </p>
-    <p style="font-size: 3rem;">{{site.event.date}}</p>
+    <p style="font-size: 3rem;">{{ site.event.date }} - {{ site.event.location }}</p>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLScXH0ZDtlpDHVW7CntkQq_PNxdWU6Vqu06Z7RmYTQ5Ea8AXzA/viewform?usp=sf_link"
        target="_blank"
        class="cta-button"
