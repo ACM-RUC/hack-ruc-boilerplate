@@ -41,7 +41,7 @@ event:
   location:    "Camden, NJ, United States"
 
   trust_badge:
-    year:   "2017"  # season year
+    year:   "2025"  # season year
     region: "na"    # "na" or "eu"
     color:  "white" # "white", "black", "gray", "red", "blue" or "yellow"
 
@@ -59,6 +59,8 @@ event:
       Hack RUC is a 24-hour hackathon at Rutgers University Camden where 
       students build amazing projects, learn new skills, and compete for prizes!
 
+      ---
+      
       Hosted in the Multi-Purpose Room @ Camden Campus Center 326 Penn St, Camden, NJ 08102, US.
       Parking in Lot C14.
       
