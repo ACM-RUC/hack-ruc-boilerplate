@@ -29,15 +29,15 @@ social:
 
 # This is Search Engine Optimization. It'll help your website look better on search.
 seo:
-  title:       "Hack RUC | x-z October 2025"
-  description: "This is a sample hackathon website that you can use by following instructions on GitHub."
+  title:       "Hack RUC | 15-16 November 2025"
+  description: "This is Rutger's Camdens annual hackathon, join us to build projects, learn new things, collaborate with others, and win prizes!"
   image:       "https://prime.mlh.io/img/logos/mlh-prime-color.svg"
 
 # Event information.
 event:
   name:        "Hack RUC"
   description: "Join us for Rutger's Camden's annual Hackathon hosted in collaboration with Major League Hacking!"
-  date:        "x-z October 2025"
+  date:        "15-16 November 2025"
   location:    "Camden, NJ, United States"
 
   trust_badge:
@@ -58,9 +58,11 @@ event:
     description: >
       Hack RUC is a 24-hour hackathon at Rutgers University Camden where 
       students build amazing projects, learn new skills, and compete for prizes!
+
+      Hosted in the Multi-Purpose Room @ Camden Campus Center 326 Penn St, Camden, NJ 08102, US.
+      Parking in Lot C14.
       
-      This is your opportunity to describe your event, what to expect, where it is & anything unique to your event.
-      Keep it straightforward, don't make it too long.
+  # add map google map widget and photos
 
   # Info Sections
   info:
