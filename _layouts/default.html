@@ -5,16 +5,102 @@
   <body{% if page.custom_class %} class="{{ page.custom_class }}"{% endif %}>
     {% include trust_badge.html %}
 
+
+<!-- Navigation Header -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="#home">{{ site.event.name }}</a>
+        </div>
+        <div class="navbar-menu">
+          <a href="#about">About</a>
+          <a href="#info">Info</a>
+          <a href="#faq">FAQ</a>
+          <a href="#links">Links</a>
+          {% if site.event.discord_link %}
+          <a href="{{ site.event.discord_link }}" target="_blank">Discord</a>
+          {% endif %}
+          {% if site.event.hero.links %}
+            {% for link in site.event.hero.links %}
+              <a href="{% if link.my_mlh %}#{% else %}{{ link.href }}{% endif %}" 
+                 class="nav-cta"
+                 {% if link.href contains 'http' %}target="_blank"{% endif %}>
+                {{ link.text }}
+              </a>
+            {% endfor %}
+          {% endif %}
+        </div>
+        <!-- Mobile menu toggle -->
+        <button class="navbar-toggle" id="navbar-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+
     {{ content }}
+    
 
     <section class="footer">
       <div class="container text-center">
         <h1>{{ site.event.name }}</h1>
-        <h3>&copy; 2016 {{ site.event.name }}. Template by <a href="https://github.com/nlaz">Niko Lazaris</a>.</h3>
+        <h3>&copy; 2025 {{ site.event.name }}. Template by <a href="https://github.com/nlaz">Niko Lazaris</a>.</h3>
       </div>
     </section>
 
     <script src="{{ '/js/jquery-1.11.3.js' | prepend: site.baseurl | prepend: site.url }}"></script>
+
+    <!-- Navigation JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              const headerOffset = 90;
+              const elementPosition = target.offsetTop;
+              const offsetPosition = elementPosition - headerOffset;
+
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+
+        // Mobile menu toggle
+        const navbarToggle = document.getElementById('navbar-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+        
+        if (navbarToggle && navbarMenu) {
+          navbarToggle.addEventListener('click', function() {
+            navbarMenu.classList.toggle('active');
+          });
+
+          // Close mobile menu when clicking on a link
+          navbarMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+              navbarMenu.classList.remove('active');
+            });
+          });
+        }
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', function() {
+          const navbar = document.querySelector('.navbar');
+          if (window.scrollY > 50) {
+            navbar.style.backgroundColor = 'rgba(15, 44, 52, 0.98)';
+          } else {
+            navbar.style.backgroundColor = 'rgba(15, 44, 52, 0.95)';
+          }
+        });
+      });
+    </script>
 
     {% include analytics/google_analytics.html ga_id=site.tracking.google_analytics %}
   </body>
